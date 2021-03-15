@@ -61,7 +61,7 @@ plugins:
 defaults:
   # _posts
   - scope:
-      path: ""
+      path: "reumongshop.github.io/_posts/"
       type: posts
     values:
       layout: single

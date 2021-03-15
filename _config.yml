@@ -23,6 +23,7 @@ plainwhite:
   # generate social links in footer
   social_links:
     github:  reumongshop
+    email: reumongshop@naver.com
     #twitter: null
     #linkedIn: null
     #rss: rss
@@ -35,7 +36,6 @@ plainwhite:
     #soundcloud: jekyll
     #telegram: jekyll
     #gitlab: jekyll
-    #email: jekyll
 
     # Mastodon instances
     # mastodon:
@@ -56,16 +56,27 @@ plugins:
   - jekyll-seo-tag
 #  - jekyll-feed
 
-
+    
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: false # 해당 포스트를 읽은 시간이 표시되는데 기본값은 true이다.
+      comments: # true
+      share: true # 포스트 공유 기능을 활성화 할 것인지 정한다. 기본값은 true이다.
+      related: true
+      
+#댓글설정
 comments:
   provider               : "disqus"
   disqus:
     shortname            : dev-hundred-blog # Short-name
 
-main:
-  - title: "Archive"
-    url: /year-archive/
-    
 defaults:
   # _posts
   - scope:
@@ -79,3 +90,16 @@ defaults:
       share: true
       related: true
       
+      
+#Navigation설정
+main:
+  - title: "Archive"
+    url: /year-archive/
+    
+---
+layout: archive
+permalink: /year-archive/
+title: "Posts by Year"
+author_profile: true
+---
+# ... Code Here ...    
